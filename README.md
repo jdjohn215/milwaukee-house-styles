@@ -37,5 +37,5 @@ These are some of Milwaukee's most common housing types. Each was dominant in th
 Other styles are less associated with a single wave of building. Mansions, for instance, are limited to a handful of places in the City. Most notably, there is a large collection of mansions near Lake Park on the Upper East Side, but there are also pockets of these dwellings on the Near West Side and in Washington Heights. Similarly, Tudor-style homes are built in thick clusters in neighborhoods including Sherman Park and Story Hill. The "Colonial Style", as evidenced by the boxplot above, has been popular for the longest period of time. This enduring appeal is reflected in its scattered distribution around the city.
 
 <img src="plots/Mansion_SuperType_Map.png" alt="drawing" width="200"
-<img src="plots/Tudor_SuperType_Map.png" alt="drawing" width="200"/>
+img src="plots/Tudor_SuperType_Map.png" alt="drawing" width="200"/>
 <img src="plots/Colonial_SuperType_Map.png" alt="drawing" width="200"/>
