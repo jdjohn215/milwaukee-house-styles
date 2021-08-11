@@ -29,11 +29,11 @@ See [`scripts/CreateHouseStyleMaps.R`](https://github.com/jdjohn215/milwaukee-ho
 These are some of Milwaukee's most common housing types. Each was dominant in their age, and they reflect contemporary modes of transportation. Old walking neighborhoods with modest cottages give way to a thick ring of duplexes whose working class occupants commuted on the new streetcars. The prosperity of the Roaring Twenties produced Milwaukee's narrow Bungalow Belt, and this pattern was repeated in turn with thousands of Cape Cod homes after World War II. As the 1950s progressed, Cape Cods gave way to newly popular Ranch homes.
 
 <p align="middle">
-  <img src="plots/Cottage_SuperType_Map.png" width="20%" />
-  <img src="plots/OldStyleDuplex_SuperType_Map.png" width="20%" /> 
-  <img src="plots/Bungalow_SuperType_Map.png" width="20%" />
-  <img src="plots/CapeCod_SuperType_Map.png" width="20%" />
-  <img src="plots/Ranch_SuperType_Map.png" width="20%" />
+  <img src="plots/Cottage_SuperType_Map.png" width="19%" />
+  <img src="plots/OldStyleDuplex_SuperType_Map.png" width="19%" /> 
+  <img src="plots/Bungalow_SuperType_Map.png" width="19%" />
+  <img src="plots/CapeCod_SuperType_Map.png" width="19%" />
+  <img src="plots/Ranch_SuperType_Map.png" width="19%" />
 </p>
 
 Other styles are less associated with a single wave of building. Mansions, for instance, are limited to a handful of places in the City. Most notably, there is a large collection of mansions near Lake Park on the Upper East Side, but there are also pockets of these dwellings on the Near West Side and in Washington Heights. Similarly, Tudor-style homes are built in thick clusters in neighborhoods including Sherman Park and Story Hill. The "Colonial Style", as evidenced by the boxplot above, has been popular for the longest period of time. This enduring appeal is reflected in its scattered distribution around the city.
