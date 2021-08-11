@@ -26,4 +26,4 @@ See [`scripts/CreateHouseStyleYearBuiltBoxplot.R`](https://github.com/jdjohn215/
 
 See [`scripts/CreateHouseStyleMaps.R`](https://github.com/jdjohn215/milwaukee-house-styles/blob/main/scripts/CreateHouseStyleMaps.R) for the code.
 
-![Cottages](plots/Cottage_SuperType_Map.png) <!-- .element height="50%" width="50%" -->
+![Cottages](plots/Cottage_SuperType_Map.png) <!-- .element width="25%" -->
