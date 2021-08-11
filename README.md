@@ -6,3 +6,4 @@ The Milwaukee Assessor's Office maintains an extensive database of property reco
 
 
 (/plots/BuiltByYear.svg)
+
