@@ -1,6 +1,6 @@
 ## Documentation for `ResidentialParcels_2021.csv`
 
-*Please see `data/HomeStylesDocumentation.md` for descriptions of each building type.*
+*Please see `[data/HomeStylesDocumentation.md](https://github.com/jdjohn215/milwaukee-house-styles/blob/main/data/HomeStylesDocumentation.md)` for descriptions of each building type.*
 
 The file `ResidentialParcels_2021.csv` includes 1 row for each residential parcel (see discussion below) included in the MPROP file downloaded from data.milwaukee.gov on August 11, 2021. For each row it contains the following columns:
 
