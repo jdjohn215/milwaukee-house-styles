@@ -6,6 +6,7 @@ The file `ResidentialParcels_2021.csv` includes 1 row for each residential parce
 
 * **TAXKEY** - the unique identifier for every parcel, 10-digits
 * **address** - each property's address, including the house number range and suffix, if applicable
+* **face_block** - the property's face block, e.g. "2400 N 27TH ST"
 * **year_built** - the `YR_BUILT` field from MPROP
 * **value_2021** - the total 2021 assessed value for the entire property
 * **building area** - the `BLDG_AREA` field from MPROP, area of the building in square feet
