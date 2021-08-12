@@ -19,7 +19,8 @@ boxplot.caption <- paste("This is a boxplot, also called a box-and-whisker plot.
                          "largest or smallest value (respectively) which is no more",
                          "than 1.5 times the inter-quartile range from the hinge.",
                          "Any data points beyond a whisker are plotted individually",
-                         "as outliers.")
+                         "as outliers. The width of each box corresponds to the",
+                         "relative number of observations in that category.")
 
 hometypes.by.year <- house.types %>%
   filter(building_type %in% c("Ranch", "Cape-Cod", "Residence old style",
