@@ -1,0 +1,133 @@
+﻿BLDG_TYPE,building_type,contains_housing,building_type2,building_type3
+01,Ranch,yes,Ranch,Ranch or multi-level
+04,Cape Cod,yes,Cape Cod,Cape Cod
+11,Duplex O/S,yes,Old Style Duplex,Old style duplex/triplex
+19,Res O/S A & 1/2,yes,Residence Old Style,Residence old style
+18,Milwaukee Bungalow,yes,Bungalow,Bungalow
+22,Dplx Bungalow,yes,Bungalow Duplex,Bungalow
+12,Duplex N/S,yes,New Style Duplex,New style duplex/triplex
+05,Colonial,yes,Colonial,Colonial
+10,Cottage,yes,Cottage,Cottage
+08,Res O/S 2sty +,yes,Residence Old Style,Residence old style
+30,Low Rise 1-3 Stories,yes,Condo - Low Rise 1-3 Stories,Condo multi-unit building
+31,Mid Rise 4-12 Stories,yes,Condo - Mid Rise 4-12 Stories,Condo multi-unit building
+54,Condo Townhouse,yes,Condo Townhouse,Townhouse
+C016,AP1 (Conventional Apt with 4-6 Units),yes,"Apartments, 4-6 units",Apartment building
+CEXM,Commercial Exempt,no,,
+C112,"Store Bldg - Multi Story (Store & Apt, Store & Ofc",yes,Stores and Apartments,Apartments + commercial
+07,Townhouse,yes,Townhouse,Townhouse
+14,Multiple Residential Bldgs,yes,Multiple residential buildings,Multiple residential buildings
+13,Duplex-Cottage,yes,Cottage Duplex,Cottage
+15,Triplex,yes,Triplex,[assign to old/new style duplex/triplex based on YR_BUILT]
+32,High Rise > 12 Stories,yes,Condo - High Rise 13+ stories,Condo multi-unit building
+C400,Warehouse Building - 1 Story,no,,
+C019,AP2 (Conventional Apt with 7-11 Units),yes,"Apartments, 7-11 units",Apartment building
+06,Tudor,yes,Tudor,Tudor
+C021,AP4 (Conv Apt with 21 or more Units),yes,"Apartments, 21+ units",Apartment building
+C110,"Store Building - Single tenant, 1 story",no,,
+17,Res O/S 1 Story,yes,Residence Old Style,Residence old style
+03,Split Level,yes,Split level,Ranch or multi-level
+C900,Parking Lot,no,,
+C160,Tavern,no,,
+C020,AP3 (Conventional Apt with 12-20 Units),yes,"Apartments, 12-20 Units",Apartment building
+C407,Service Building,no,,
+C440,Auto & Auto Body Repair,no,,
+C999,Commercial Land,no,,
+C402,Multi Story Warehouse,no,,
+C980,Not Listed (Exm or Mfg),no,,
+02,Bi-level,yes,Bi-level,Ranch or multi-level
+C310,Office Building - Multi Story (Ofc & Apt),yes,Offices and Apartments,Apartments + commercial
+C109,Subsidized Apartments,yes,Subsidized Apartments,Apartment building
+C111,Store Building - Multiple Tenants,no,,
+C340,Church,no,,
+56,Condo Duplex,yes,Condo - duplex,[assign to old/new style duplex/triplex based on YR_BUILT]
+51,Condo Ranch,yes,Condo - ranch,Ranch or multi-level
+C300,Office Building - 1 Story,no,,
+09,Mansion,yes,Mansion,Mansion
+C320,Medical Clinic,no,,
+C550,Fast Food Operation,no,,
+C017,Townhouse Apartment,yes,Townhouse Apartment,Townhouse
+C920,Residence With Commercial Usage,yes,,
+C502,Svs Station w Conv Store,no,,
+OB,OBY,no,,
+C351,Day Care Center,no,,
+C130,Strip Shopping Center,no,,
+C560,Sit Down Restaurant,no,,
+C312,Office Building - Class B,no,,
+C540,Used Car Sale,no,,
+C014,R/M (Res. Multiple) or Rooming House - commercial,yes,Rooming House,Rooming House
+C350,School,no,,
+C800,"Bank, Savings & Loan",no,,
+52,Condo BI/TRI Level,yes,Condo BI/Tri Level,Ranch or multi-level
+C460,"Parking Garage, Parking Ramp",no,,
+C150,Beer Depot & Liquor Store,no,,
+C403,Mini Warehouse,no,,
+C140,Super Market,no,,
+C921,Mansions with Commercial Useage,yes,Mansion,Mansion
+C106,"License Res Care Facility, Halfway House, etc.",no,,
+C406,Pole Building,no,,
+C503,Svc Station w Conv and Carwash,no,,
+C470,Trucking Terminal,no,,
+C608,Pharmacy,no,,
+C330,Funeral Home,no,,
+C190,Special - to use this code see supv,no,,
+C409,T-Hangar,no,,
+C311,Office Building - Class A,no,,
+C490,Salvage Yard,no,,
+C410,"Car Dealer, Truck Dealer",no,,
+C510,Car Wash,no,,
+16,Contemporary,yes,Contemporary,Contemporary
+C313,Office Building - Class C,no,,
+C405,Bulk Storage,no,,
+C531,Laundromat,no,,
+C401,Office Warehouse Park - multi tenants,no,,
+C602,Hotel - Limited Service,no,,
+C171,"Sport, Health & Recreational Properties",no,,
+C430,Muffler Shop,no,,
+C600,Hotel - Full Service,no,,
+C113,Single Tenant Multi Story Retail,no,,
+C131,Neighborhood Center,no,,
+C950,Billboard,no,,
+C105,Nursing Home,no,,
+C120,"Post Office, Social Security Building",no,,
+C001,Ranch - commercial,yes,Ranch,Ranch or multi-level
+C008,Residence Old/Style - commerical,yes,Residence Old Style,Residence old style
+C011,Duplex Old/Style - commercial,yes,Old Style Duplex,Old style duplex/triplex
+C420,Tire Dealer,no,,
+C504,Svc Station w Conv and Restaurant,no,,
+C520,"Custard Stand, Drive-In",no,,
+C604,Hotel - Select Service,no,,
+C004,Cape Cod - commercial,yes,Cape Cod,Cape Cod
+C102,Rooming House - 8 or more units,yes,Rooming House,Rooming House
+C530,Laundry Pick-up Station,no,,
+C134,Discount Department Store,no,,
+C441,Quick Oil Change,no,,
+C450,Auto Rental Agency,no,,
+C480,Greenhouse,no,,
+57,Condo Other,yes,Condo - other,Condo multi-unit building
+C610,Motel,no,,
+C133,Super Regional Shopping Center,no,,
+C170,Bowling Alley,no,,
+C506,"Svc Station w Conv, Retail, Restaurant and Carwash",no,,
+C505,"Svc Station w Conv, Carwash, and Restaurant",no,,
+C700,Theater,no,,
+C180,Supper Club,no,,
+C501,Svc Station wo Conv Store,no,,
+C104,Mobile Home Parks,yes,Mobile Home Park,Mobile home park
+C360,Radio or TV Station,no,,
+C370,Hospital,no,,
+C605,Hotel - Extended Stay,no,,
+C007,Townhouse - Commercial,yes,Townhouse,Townhouse
+C015,Triplex - commercial,yes,Triplex,[assign to old/new style duplex/triplex based on YR_BUILT]
+C404,Lumber Yards,no,,
+C005,Colonial - commercial,yes,Colonial,Colonial
+C010,Cottage - commercial,yes,Cottage,Cottage
+C018,Milwaukee Bungalow - commercial,yes,Bungalow,Bungalow
+C100,Apartments - 8 or more units,yes,[specify apartment size group based on NR_UNITS],Apartment building
+C132,Community Shopping Center,no,,
+C314,Office Building - Class D,no,,
+C380,Correctional Institution,no,,
+C012,Duplex New/Style - commercial,yes,New Style Duplex,New style duplex/triplex
+C013,Duplex - Cottage - commercial,yes,Old Style Duplex,Old style duplex/triplex
+C135,Department Store,no,,
+C606,Hotel - Long Term Residents,no,,
