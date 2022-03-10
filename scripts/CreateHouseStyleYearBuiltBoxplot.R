@@ -1,14 +1,14 @@
 library(tidyverse)
 
-house.types <- read_csv("data/ResidentialParcels_2021.csv") %>%
-  filter(between(year_built, 1800, 2021)) %>%
-  mutate(building_type = fct_reorder(building_type, year_built),
-         building_type2 = fct_reorder(building_type2, year_built),
-         building_supertype = fct_reorder(building_supertype, year_built))
+house.types <- read_csv("data/ParcelsWithBuildingTypes.csv") %>%
+  filter(between(YR_BUILT, 1800, 2022)) %>%
+  mutate(building_type = fct_reorder(building_type, YR_BUILT),
+         building_type2 = fct_reorder(building_type2, YR_BUILT),
+         building_type3 = fct_reorder(building_type3, YR_BUILT))
 
 house.types %>% group_by(building_type) %>% summarise(count = n()) %>% arrange(desc(count))
 house.types %>% group_by(building_type2) %>% summarise(count = n()) %>% arrange(desc(count))
-house.types %>% group_by(building_supertype) %>% summarise(count = n()) %>% arrange(desc(count))
+house.types %>% group_by(building_type3) %>% summarise(count = n()) %>% arrange(desc(count))
 
 boxplot.caption <- paste("This is a boxplot, also called a box-and-whisker plot.",
                          "For each box, the middle line shows the median.", 
@@ -23,17 +23,18 @@ boxplot.caption <- paste("This is a boxplot, also called a box-and-whisker plot.
                          "relative number of observations in that category.")
 
 hometypes.by.year <- house.types %>%
-  filter(building_type %in% c("Ranch", "Cape-Cod", "Residence old style",
-                              "Duplex old style", "Milwaukee Bungalow",
-                              "Bungalow duplex", "Duplex new style", "Colonial",
-                              "Cottage", "Townhouse", "Duplex cottage", "Tudor")) %>%
-  ggplot(aes(building_type, year_built)) +
+  filter(building_type3 %in% c("Ranch", "Cape Cod", "Residence old style",
+                              "Old style duplex/triplex", "Bungalow",
+                              "New style duplex/triplex", "Colonial",
+                              "Cottage", "Townhouse", "Tudor", "Contemporary",
+                              "Apartment building", "Condo multi-unit building")) %>%
+  ggplot(aes(building_type3, YR_BUILT)) +
   geom_boxplot(varwidth = TRUE, outlier.alpha = 0.25, outlier.stroke = F) +
   scale_x_discrete(labels = function(x){str_wrap(x, width = 12)},
                    name = NULL) +
   ylab("year built") +
-  labs(title = "Common Milwaukee home types by year built",
-       subtitle = "only includes houses still standing in 2021",
+  labs(title = "Common Milwaukee housing types by year built",
+       subtitle = "only includes buildings still standing in 2022",
        caption = str_wrap(boxplot.caption, 170)) +
   ggthemes::theme_tufte() +
   theme(plot.title.position = "plot")

@@ -2,8 +2,8 @@ library(tidyverse)
 library(sf)
 library(tmap)
 
-parcels <- read_csv("data/ResidentialParcels_2021.csv")
-face.blocks <- st_read("residential_face_blocks/residential_face_blocks.shp")
+parcels <- read_csv("data/ParcelsWithBuildingTypes.csv")
+face.blocks <- st_read("housing_face_blocks/housing_face_blocks.shp")
 
 # supplemental geographies, to be used in mapping
 city.limits <- st_read("data/MilwaukeeCityLimits/MilwaukeeCityLimits.shp")
@@ -11,11 +11,11 @@ freeways <- st_read("data/MilwaukeeFreeways/MilwaukeeFreeways.shp")
 water <- st_read("data/MilwaukeeWaterPolygons/MilwaukeeWaterPolygons.shp")
 parks <- st_read("data/MilwaukeeParkPolygons/MilwaukeeParkPolygons.shp")
 
-# totals for each home style supertype in each face block
-supertype.totals <- parcels %>%
+# totals for each home style in each face block
+type.totals <- parcels %>%
   group_by(face_block) %>%
   mutate(total_parcels = n()) %>%
-  group_by(face_block, total_parcels, building_supertype) %>%
+  group_by(face_block, total_parcels, building_type3) %>%
   summarise(count = n()) %>%
   ungroup() %>%
   mutate(pct = (count/total_parcels)*100)
@@ -24,8 +24,8 @@ supertype.totals <- parcels %>%
 # This function makes a small map of a given home type, or list of home types
 map_hometype <- function(style, breaks = c(0, 10, 20, 30, Inf),
                          palette = c("#737373", "#525252", "#252525", "#000000")){
-  map.data <- supertype.totals %>%
-    filter(building_supertype %in% style) %>%
+  map.data <- type.totals %>%
+    filter(building_type3 %in% style) %>%
     group_by(face_block) %>%
     summarise(pct = sum(pct)) %>%
     inner_join(face.blocks) %>%
@@ -46,38 +46,58 @@ map_hometype <- function(style, breaks = c(0, 10, 20, 30, Inf),
 }
 
 parcels %>%
-  group_by(building_supertype) %>%
+  group_by(building_type3) %>%
   summarise(count = n()) %>%
   arrange(desc(count))
 
 # includes cottages and duplex cottages
 cottage.map <- map_hometype("Cottage")
-tmap_save(cottage.map, "plots/Cottage_SuperType_Map.png", height = 5)
+tmap_save(cottage.map, "plots/Cottage_Type3_Map.png", height = 5)
 
 # includes some triplexes
-old.style.duplex.map <- map_hometype("Old style duplex")
-tmap_save(old.style.duplex.map, "plots/OldStyleDuplex_SuperType_Map.png", height = 5)
+old.style.duplex.map <- map_hometype("Old style duplex/triplex")
+tmap_save(old.style.duplex.map, "plots/OldStyleDuplex_Type3_Map.png", height = 5)
 
 # includes duplex bungalows
 bungalow.map <- map_hometype("Bungalow")
-tmap_save(bungalow.map, "plots/Bungalow_SuperType_Map.png", height = 5)
+tmap_save(bungalow.map, "plots/Bungalow_Type3_Map.png", height = 5)
 
 # Cape Cod
-cape.cod.map <- map_hometype("Cape-Cod")
-tmap_save(cape.cod.map, "plots/CapeCod_SuperType_Map.png", height = 5)
+cape.cod.map <- map_hometype("Cape Cod")
+tmap_save(cape.cod.map, "plots/CapeCod_Type3_Map.png", height = 5)
 
 # Ranch, includes some bi- and split-level houses
-ranch.map <- map_hometype("Ranch")
-tmap_save(ranch.map, "plots/Ranch_SuperType_Map.png", height = 5)
+ranch.map <- map_hometype("Ranch or multi-level")
+tmap_save(ranch.map, "plots/Ranch_Type3_Map.png", height = 5)
 
 # Colonial
 colonial.map <- map_hometype("Colonial")
-tmap_save(colonial.map, "plots/Colonial_SuperType_Map.png", height = 5)
+tmap_save(colonial.map, "plots/Colonial_Type3_Map.png", height = 5)
 
 # Mansion
 mansion.map <- map_hometype("Mansion")
-tmap_save(mansion.map, "plots/Mansion_SuperType_Map.png", height = 5)
+tmap_save(mansion.map, "plots/Mansion_Type3_Map.png", height = 5)
 
 # Tudor
 tudor.map <- map_hometype("Tudor")
-tmap_save(tudor.map, "plots/Tudor_SuperType_Map.png", height = 5)
+tmap_save(tudor.map, "plots/Tudor_Type3_Map.png", height = 5)
+
+# Townhouse
+townhouse.map <- map_hometype("Townhouse")
+tmap_save(tudor.map, "plots/Townhouse_Type3_Map.png", height = 5)
+
+# Condo multi-unit
+condo.map <- map_hometype("Condo multi-unit building")
+tmap_save(tudor.map, "plots/CondoMultiUnit_Type3_Map.png", height = 5)
+
+# Apartment buildings
+apartment.map <- map_hometype("Apartment building")
+tmap_save(apartment.map, "plots/ApartmentBuilding_Type3_Map.png", height = 5)
+
+# Apartments + commercial
+apartment.commercial.map <- map_hometype("Apartments + commercial")
+tmap_save(apartment.commercial.map, "plots/ApartmentCommercial_Type3_Map.png", height = 5)
+
+# All apartments
+apartment.all.map <- map_hometype(c("Apartments + commercial", "Apartment building"))
+tmap_save(apartment.all.map, "plots/ApartmentAll_Type3_Map.png", height = 5)
