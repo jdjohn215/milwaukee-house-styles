@@ -9,8 +9,8 @@
 05,Colonial,yes,Colonial,Colonial
 10,Cottage,yes,Cottage,Cottage
 08,Res O/S 2sty +,yes,Residence Old Style,Residence old style
-30,Low Rise 1-3 Stories,yes,Condo - Low Rise 1-3 Stories,Condo multi-unit building
-31,Mid Rise 4-12 Stories,yes,Condo - Mid Rise 4-12 Stories,Condo multi-unit building
+30,Low Rise 1-3 Stories,yes,Condo - Low Rise 1-3 Stories,Condos in multi-unit building
+31,Mid Rise 4-12 Stories,yes,Condo - Mid Rise 4-12 Stories,Condos in multi-unit building
 54,Condo Townhouse,yes,Condo Townhouse,Townhouse
 C016,AP1 (Conventional Apt with 4-6 Units),yes,"Apartments, 4-6 units",Apartment building
 CEXM,Commercial Exempt,no,,
@@ -19,7 +19,7 @@ C112,"Store Bldg - Multi Story (Store & Apt, Store & Ofc",yes,Stores and Apartme
 14,Multiple Residential Bldgs,yes,Multiple residential buildings,Multiple residential buildings
 13,Duplex-Cottage,yes,Cottage Duplex,Cottage
 15,Triplex,yes,Triplex,[assign to old/new style duplex/triplex based on YR_BUILT]
-32,High Rise > 12 Stories,yes,Condo - High Rise 13+ stories,Condo multi-unit building
+32,High Rise > 12 Stories,yes,Condo - High Rise 13+ stories,Condos in multi-unit building
 C400,Warehouse Building - 1 Story,no,,
 C019,AP2 (Conventional Apt with 7-11 Units),yes,"Apartments, 7-11 units",Apartment building
 06,Tudor,yes,Tudor,Tudor
@@ -104,7 +104,7 @@ C134,Discount Department Store,no,,
 C441,Quick Oil Change,no,,
 C450,Auto Rental Agency,no,,
 C480,Greenhouse,no,,
-57,Condo Other,yes,Condo - other,Condo multi-unit building
+57,Condo Other,yes,Condo - other,Condos in multi-unit building
 C610,Motel,no,,
 C133,Super Regional Shopping Center,no,,
 C170,Bowling Alley,no,,
