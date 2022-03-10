@@ -44,6 +44,6 @@ Other styles are less associated with a single wave of building. Mansions, for i
 
 <p align="middle">
   <img src="plots/Mansion_Type3_Map.png" width="200" />
-  <img src="plots/Tudor_2Type_Map.png" width="200" /> 
+  <img src="plots/Tudor_Type3_Map.png" width="200" /> 
   <img src="plots/Colonial_Type3_Map.png" width="200" />
 </p>
