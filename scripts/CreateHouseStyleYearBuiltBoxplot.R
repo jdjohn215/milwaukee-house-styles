@@ -27,7 +27,7 @@ hometypes.by.year <- house.types %>%
                               "Old style duplex/triplex", "Bungalow",
                               "New style duplex/triplex", "Colonial",
                               "Cottage", "Townhouse", "Tudor", "Contemporary",
-                              "Apartment building", "Condo multi-unit building")) %>%
+                              "Apartment building", "Condos in multi-unit building")) %>%
   ggplot(aes(building_type3, YR_BUILT)) +
   geom_boxplot(varwidth = TRUE, outlier.alpha = 0.25, outlier.stroke = F) +
   scale_x_discrete(labels = function(x){str_wrap(x, width = 12)},

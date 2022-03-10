@@ -87,7 +87,7 @@ townhouse.map <- map_hometype("Townhouse")
 tmap_save(tudor.map, "plots/Townhouse_Type3_Map.png", height = 5)
 
 # Condo multi-unit
-condo.map <- map_hometype("Condo multi-unit building")
+condo.map <- map_hometype("Condos in multi-unit building")
 tmap_save(tudor.map, "plots/CondoMultiUnit_Type3_Map.png", height = 5)
 
 # Apartment buildings
