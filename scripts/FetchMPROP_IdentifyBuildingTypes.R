@@ -12,6 +12,9 @@ resi.building.types <- building.types %>%
 
 # Merge MPROP with codes, joining by BLDG_TYPE
 d <- current.mprop %>%
+  filter(NR_UNITS > 0, # must contain at least 1 housing unit
+         LAND_USE_GP != 13 # must not be classified as vacant land
+         ) %>%
   inner_join(resi.building.types) %>%
   # create address and face-block variables
   mutate(street_no = case_when(
