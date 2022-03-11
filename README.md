@@ -6,6 +6,13 @@ Like a tree, Milwaukee's residential neighborhoods spread in concentric rings ar
 **Please note:** A previous version of the repository focused exclusively on "residential properties" (`C_A_CLASS == 1`). The repository has been updated to incorporate additional information added by the Assessor's Office in recent years.
 
 --------------------------------------------------------------------------------
+**Condominiums**
+
+Condominiums are a special case. Technically, calling something a "condo" simply describes its ownership structure and nothing about the kind of building. Sometimes townhouses, duplexes, etc. are "condo-ized." There are many duplexes in Milwaukee which technically consist of two separate legal condominium units. In all these cases, I have coded to the condo to the physical building's architectural style.
+
+Other condos are located in multi-unit buildings. I have classified these as "Condos in multi-unit buildings." A word of caution: each condo unit has its own TAXKEY, so a single building containing 40 condo units appears 40 times in the data. By contrast, an apartment building with 40 units appears just once. 
+
+--------------------------------------------------------------------------------
 
 The Milwaukee Assessor's Office maintains an extensive database of property records. They assign one of a list of architectural styles to each house in Milwaukee. This repo shows ways of using this data.
 
@@ -46,4 +53,13 @@ Other styles are less associated with a single wave of building. Mansions, for i
   <img src="plots/Mansion_Type3_Map.png" width="200" />
   <img src="plots/Tudor_Type3_Map.png" width="200" /> 
   <img src="plots/Colonial_Type3_Map.png" width="200" />
+</p>
+
+
+Detailed architectural style information isn't available for apartment or multi-unit condo buildings, but their pattern of construction is also revealing. Condo buildings are cocnentrated downtown, on the east side, and in a handful of large developments on the far northwest side. Apartment buildings are more widespread across the city. They make up large portions of the housing downtown and on the east side, as well as on the near west side. Across the rest of the city, they typically follow commercial corridors.
+
+
+<p align="middle">
+  <img src="plots/CondoMultiUnit_Type3_Map.png" width="200" />
+  <img src="plots/ApartmentBuilding_Type3_Map.png" width="200" />
 </p>
