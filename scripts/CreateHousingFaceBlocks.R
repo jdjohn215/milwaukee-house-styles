@@ -11,18 +11,27 @@ library(sf)
 # This might take a few minutes to download
 parcels <- st_read("https://milwaukeemaps.milwaukee.gov/arcgis/rest/services/property/parcels_mprop/MapServer/2/query?returnGeometry=true&where=1=1&outFields=*&f=geojson")
 
-# building types
-building.types <- read_csv("building-type-classification/BuildingTypeCodes.csv")
-resi.building.types <- building.types %>%
-  filter(!is.na(building_type2))
+# TAXKEYS identified by BLDG_TYPE code
+resi.taxkeys <- read_csv("data/ParcelsWithBuildingTypes.csv")
 
-blocks <- parcels %>%
+# Add face block id to each parcel polygon
+parcels.with.blocks <- parcels %>%
   # construct face-block variable
   mutate(block_number = paste0(str_sub(HOUSE_NR_LO, 1, -3), "00"),
          face_block = paste(block_number, SDIR, STREET),
-         face_block = ifelse(!is.na(STTYPE), paste(face_block, STTYPE), face_block)) %>%
-  filter(BLDG_TYPE %in% resi.building.types$BLDG_TYPE) %>% # just parcels with housing
+         face_block = ifelse(!is.na(STTYPE), paste(face_block, STTYPE), face_block))
+
+# Create face block polygons consisting of only housing parcels
+resi.blocks <- parcels.with.blocks %>%
+  filter(TAXKEY %in% resi.taxkeys$TAXKEY) %>% # just parcels with housing
   group_by(face_block) %>%
   summarise()
 
-st_write(blocks, "housing_face_blocks/housing_face_blocks.shp")
+# Create face block polygons consisting of ALL parcels
+all.blocks <- parcels.with.blocks %>%
+  group_by(face_block) %>%
+  summarise()
+
+
+st_write(resi.blocks, "housing_face_blocks/housing_face_blocks.shp", delete_dsn = T)
+st_write(all.blocks, "housing_face_blocks/all_face_blocks.geojson")
