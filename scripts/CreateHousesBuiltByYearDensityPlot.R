@@ -27,7 +27,8 @@ gg.year.built <- ggplot(houses, aes(YR_BUILT)) +
   ggthemes::theme_tufte() +
   theme(axis.ticks.y = element_blank(),
         axis.text.y = element_blank(),
-        axis.title.y = element_blank())
+        axis.title.y = element_blank(),
+        panel.background = element_rect(fill = "white", colour = "white"))
 gg.year.built
 
 # annotating a density plot is a bit complicated, because we have to identify

@@ -37,7 +37,8 @@ hometypes.by.year <- house.types %>%
        subtitle = "only includes buildings still standing in 2022",
        caption = str_wrap(boxplot.caption, 170)) +
   ggthemes::theme_tufte() +
-  theme(plot.title.position = "plot")
+  theme(plot.title.position = "plot",
+        panel.background = element_rect(fill = "white", colour = "white"))
 hometypes.by.year
 ggsave("plots/HomesTypesByYear.svg",
        hometypes.by.year, width = 9, height = 5)
